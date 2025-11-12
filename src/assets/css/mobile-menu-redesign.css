@@ -1,0 +1,123 @@
+/* --- mobile-menu-redesign.css --- */
+/* Đổi nền đỏ sang nền trắng/xám hiện đại */
+.mm-menu {
+    background: #fff !important; /* Nền trắng */
+    color: #202124 !important; /* Chữ xám đậm */
+  }
+  
+  /* Thanh Navbar (chứa tiêu đề, nút back) */
+  .mm-menu .mm-navbar {
+    border-color: #dadce0 !important;
+  }
+  .mm-menu .mm-navbar > *,
+  .mm-menu .mm-navbar a {
+    color: #5f6368 !important; /* Chữ xám */
+  }
+  .mm-menu .mm-navbar .mm-btn:before,
+  .mm-menu .mm-navbar .mm-btn:after {
+    border-color: #5f6368 !important;
+  }
+  
+  /* Đường kẻ phân cách giữa các link */
+  .mm-menu .mm-listview > li:after {
+    border-color: #e8eaed !important;
+  }
+  
+  /* Mũi tên > */
+  .mm-menu .mm-listview > li .mm-prev:before,
+  .mm-menu .mm-listview > li .mm-next:after,
+  .mm-menu .mm-listview > li .mm-arrow:after {
+    border-color: #b0b0b0 !important;
+  }
+  .mm-menu .mm-listview > li .mm-next:before {
+    border-color: #e8eaed !important;
+  }
+  
+  /* Khi chọn 1 mục (hover/active) */
+  .mm-menu .mm-listview > li.mm-selected > a:not(.mm-next),
+  .mm-menu .mm-listview > li.mm-selected > span {
+    background: #f1f3f4 !important; /* Nền xám nhạt Google */
+  }
+  
+  /* Khi mở menu con (sub-menu) */
+  .mm-menu.mm-vertical .mm-listview li.mm-opened > a.mm-next,
+  .mm-menu.mm-vertical .mm-listview li.mm-opened > .mm-panel {
+    background: #f7f9fc !important; /* Nền xám cực nhạt */
+  }
+  
+  /* Thanh tìm kiếm */
+  .mm-menu .mm-search input {
+    background: #f1f3f4 !important;
+    color: #202124 !important;
+  }
+  div.search_mobi {
+    background: #e8eaed;
+  }
+  div.search_mobi input {
+    color: #202124;
+  }
+  /* Thêm vào cuối file new-layout.css */
+
+/* 1. Đẩy menu_top ra 100% chiều rộng của thanh header */
+#header .header_top .container_main {
+    width: 100%;
+    padding: 0 20px; /* Thêm padding 2 bên cho đẹp */
+  }
+  
+  /* 2. Đẩy mục đăng nhập/đăng xuất sang phải */
+  #header .menu_top ul li:last-child {
+    margin-left: 900px; /* Đây là dòng quan trọng nhất */
+  }
+  /* Thêm vào cuối file new-layout.css */
+
+/* Căn giữa logo sau khi xóa MenuBox */
+/* 1. Sửa lại header chính (sau khi xóa MenuBox) */
+#header .header {
+    padding: 10px 0; /* Thêm chút đệm cho header */
+  }
+  
+  /* 2. Căn giữa logo (đã thêm ở bước trước) */
+  #header .header > .container_main {
+    justify-content: left; 
+  }
+  
+  /* 3. Chỉnh logo nhỏ lại và đẹp hơn */
+  #header .logo img {
+    max-height: 100px; /* Chỉnh chiều cao tối đa (bạn có thể đổi 60px thành 50px, 70px... tùy ý) */
+    width: auto;      /* Để chiều rộng tự điều chỉnh theo */
+  }
+  /* Thêm vào cuối file new-layout.css */
+
+/* Biến link "Đăng nhập" thành một cái nút */
+#header .menu_top ul li .login-link {
+    background: rgba(255, 255, 255, 0.2); /* Nền mờ giống nút Đăng xuất */
+    color: #fff;
+    font-weight: 500;
+    padding: 4px 12px; /* Đệm để tạo thành nút */
+    border-radius: 6px; /* Bo góc */
+    transition: all 0.2s ease;
+  }
+  
+  /* Thêm hiệu ứng hover */
+  #header .menu_top ul li .login-link:hover {
+    background: rgba(255, 255, 255, 0.3);
+    opacity: 1; /* Tắt hiệu ứng mờ cũ */
+  }
+  /* Thêm vào cuối file new-layout.css */
+
+/* Style cho link "Quản lý Sản phẩm" (làm cho nó giống nút) */
+#header .menu_top ul li .admin-link {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  text-decoration: none; /* Đảm bảo không bị gạch chân */
+}
+
+/* Thêm hiệu ứng hover */
+#header .menu_top ul li .admin-link:hover {
+  background: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+}

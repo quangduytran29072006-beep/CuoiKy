@@ -1,0 +1,40 @@
+/* --- filter.css --- */
+
+.filters-container {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép xuống dòng trên màn hình nhỏ */
+    gap: 15px; /* Khoảng cách giữa các phần tử */
+    margin-bottom: 25px; /* Khoảng cách với lưới sản phẩm */
+    padding: 15px;
+    background-color: #f7f9fc;
+    border-radius: 8px;
+  }
+  
+  .filter-input {
+    flex: 2; /* Chiếm nhiều không gian nhất */
+    min-width: 200px; /* Chiều rộng tối thiểu */
+    padding: 10px 14px;
+    font-size: 15px;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.2s;
+  }
+  
+  .filter-select {
+    flex: 1; /* Chiếm 1 phần không gian */
+    min-width: 180px; /* Chiều rộng tối thiểu */
+    padding: 10px 14px;
+    font-size: 15px;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    outline: none;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .filter-input:focus,
+  .filter-select:focus {
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.15);
+  }
